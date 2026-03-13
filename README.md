@@ -86,7 +86,7 @@ Use variáveis de ambiente locais e no serviço de deploy (como Vercel).
 2. Adicione sua chave:
 
 ```
-VITE_GEMINI_API_KEY=sua_chave_aqui
+GEMINI_API_KEY=sua_chave_aqui
 ```
 
 3. Adicione `.env.local` ao `.gitignore` para não enviar a chave para o GitHub.
@@ -94,7 +94,7 @@ VITE_GEMINI_API_KEY=sua_chave_aqui
 ### Passo a passo no Vercel:
 
 1. Abra **Settings → Environment Variables** do projeto.  
-2. Adicione a variável `VITE_GEMINI_API_KEY` com o valor da sua chave.  
+2. Adicione a variável `GEMINI_API_KEY` com o valor da sua chave.  
 3. Faça redeploy do projeto.  
 
 Isso garante que sua chave fique **protegida e não fique pública**.
