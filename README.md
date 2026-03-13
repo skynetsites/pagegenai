@@ -168,4 +168,4 @@ Veja o arquivo **[LICENSE](./LICENSE)** para mais detalhes.
 ## Autor
 
 Projeto desenvolvido por **Isaias Oliveira**.  
-🔗 Conecte-se comigo no **[in/skynetsites](https://www.linkedin.com/in/skynetsites/)**
+Conecte-se comigo no **[in/skynetsites](https://www.linkedin.com/in/skynetsites/)**
