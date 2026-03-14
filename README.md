@@ -8,36 +8,49 @@
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT/Gemini-black?logo=openai)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+
 # Sobre o projeto
 
-O **PageGen AI** transforma ideias em **Landing Pages estruturadas** de forma rápida usando **Inteligência Artificial**.  
-A aplicação é voltada para desenvolvedores, empreendedores e criadores digitais, ajudando a validar ideias rapidamente com uma base inicial de páginas.
+O **PageGen AI** é uma aplicação web que tem como objetivo transformar ideias em **Landing Pages estruturadas** de forma rápida utilizando **Inteligência Artificial**.
 
-A IA utilizada é a **Google Gemini API**, que recebe uma ideia do usuário e retorna sugestões estruturadas de conteúdo para a landing page.  
-O projeto está em **fase BETA** e novas funcionalidades estão sendo desenvolvidas continuamente.
+A proposta do projeto é ajudar desenvolvedores, empreendedores e criadores digitais a **validar ideias mais rapidamente**, gerando estruturas iniciais de páginas que podem servir como base para produtos, serviços ou campanhas.
 
-# Preview
+Para gerar as páginas automaticamente, a aplicação utiliza **Inteligência Artificial através da API do Google Gemini**, que recebe uma ideia do usuário e retorna sugestões estruturadas de conteúdo para uma Landing Page.
+
+Essa abordagem acelera o processo de criação e reduz o tempo necessário para estruturar páginas iniciais de projetos.
+
+O projeto ainda está em **fase BETA**, então novas funcionalidades e melhorias continuam sendo desenvolvidas.
+
+## Preview
 
 ### Demonstração da Aplicação
 
-Confira abaixo como o **PageGen AI** transforma ideias em landing pages rapidamente:
+Confira abaixo como o **PageGen AI** transforma ideias em landing pages de forma rápida e prática.  
+Acompanhe o funcionamento pelo GIF a seguir:
 
 ![Preview do projeto](./public/preview.gif)
 
 # Tecnologias utilizadas
 
-- React  
-- TypeScript  
-- Vite  
-- TailwindCSS  
-- React Router  
-- Lucide Icons  
-- Google Gemini API  
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+
+- React
+- TypeScript
+- Vite
+- TailwindCSS
+- React Router
+- Lucide Icons
+- Google Gemini API (IA generativa)
 
 # Integração com Inteligência Artificial
 
-A geração das Landing Pages é feita utilizando **IA via Google Gemini API**.  
-Para isso, é necessário configurar uma **API Key** através de variáveis de ambiente, garantindo **segurança e privacidade**.
+A geração das Landing Pages é feita utilizando **Inteligência Artificial através da API do Google Gemini**.
+
+A aplicação envia instruções para o modelo de IA com base na ideia informada pelo usuário. O modelo retorna uma estrutura inicial de conteúdo que pode ser utilizada para montar uma Landing Page.
+
+Para utilizar essa funcionalidade, é necessário configurar uma **chave da API (API Key)** através de variáveis de ambiente.
+
+Isso garante mais segurança e evita expor a chave diretamente no código.
 
 # Como executar o projeto localmente
 
@@ -78,43 +91,58 @@ npm run dev
 - Acesse: http://localhost:5173  
 - A API `/api/gemini` pode não funcionar neste modo.
 
-# Desafios enfrentados
+# Desafio enfrentado durante o desenvolvimento
 
-- Estruturar **ideias em páginas organizadas automaticamente**  
-- Integrar a **IA de forma útil** para gerar conteúdo que realmente monte uma landing page funcional
+Um dos principais desafios foi estruturar uma forma de transformar **ideias em páginas organizadas automaticamente**, sem perder a lógica de uma boa Landing Page.
+
+Durante o desenvolvimento ficou claro que não basta apenas gerar conteúdo automaticamente. É necessário organizar corretamente os blocos da página para garantir uma boa experiência para o usuário.
+
+Outro desafio foi integrar a **API de Inteligência Artificial** de forma que as respostas geradas fossem úteis para estruturar uma página real.
 
 # Aprendizados
 
-- Estruturação moderna com **React + Vite**  
-- Criação rápida de interfaces com **TailwindCSS**  
-- Organização de rotas com **React Router**  
-- Integração com APIs de **IA generativa**  
-- Uso de **variáveis de ambiente** para proteger chaves  
+Durante a criação do projeto alguns aprendizados importantes foram:
 
-# Próximos passos
+- Estruturação de aplicações modernas com **React + Vite**
+- Uso do **TailwindCSS** para criação de interfaces rápidas
+- Organização de rotas utilizando **React Router**
+- Integração com **APIs de Inteligência Artificial**
+- Uso de **variáveis de ambiente para proteger chaves de API**
+- Estruturação de projetos escaláveis no frontend
 
-- Novas ferramentas baseadas em IA  
-- Mais opções de geração de páginas  
-- Novos templates  
-- Melhorias na geração de conteúdo  
+# Próximos passos do projeto
+
+Algumas melhorias planejadas:
+
+- Novas ferramentas baseadas em IA
+- Mais opções de geração de páginas
+- Melhorias na experiência do usuário
+- Novos templates de Landing Pages
+- Melhorias na geração de conteúdo pela IA
 
 # Contribuição
 
-Se quiser contribuir, abra uma **issue** ou envie **pull requests**.  
-Doações via PIX ajudam a manter o projeto:
+Se quiser contribuir com feedback ou sugestões, fique à vontade para abrir uma **[Issue](https://github.com/skynetsites/pagegenai/issues)** ou **[enviar ideias](https://github.com/skynetsites/pagegenai/pulls)**.  
+
+**Ajude a manter esse projeto!**
+
+Este é um projeto gratuito e independente. Sua doação via PIX ajuda a manter a plataforma e a IA, para continuarmos oferecendo este serviço:
 
 ![QR Code de Contribuição](https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=00020126580014BR.GOV.BCB.PIX013605ed170a-9ddf-4526-94ac-d17affc230bc5204000053039865802BR5925Francisco%20Isaias%20Oliveira6009SAO%20PAULO62140510dvfzXaciz76304B02E)
 
 # Deploy
 
-Aplicação disponível em:  
+Aplicação disponível em:
+
 https://pagegenai-nu.vercel.app/
 
 # Licença
 
-Licenciado sob **MIT**. Veja [LICENSE](./LICENSE) para mais detalhes.
+Este projeto está licenciado sob a **Licença MIT**.
 
-# Autor
+Veja o arquivo **[LICENSE](./LICENSE)** para mais detalhes.
 
-**Isaias Oliveira**  
-Conecte-se: [in/skynetsites](https://www.linkedin.com/in/skynetsites/)
+## Autor
+
+Projeto desenvolvido por **Isaias Oliveira**.  
+Conecte-se comigo no **[in/skynetsites](https://www.linkedin.com/in/skynetsites/)**
