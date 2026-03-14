@@ -73,7 +73,7 @@ export const PromptInput = (props: PromptInputProps) => {
       <button
         type="submit"
         disabled={!input.trim() || isLoading}
-        className="bg-indigo-600 hover:bg-indigo-500 text-white p-3 rounded-lg cursor-pointer transition-colors duration-200 flex items-center justify-center shadow-lg shadow-indigo-500/20"
+        className={`bg-indigo-600 ${!input.trim() ? 'opacity-50 cursor-not-allowed' : 'hover:bg-indigo-500 cursor-pointer'} text-white p-3 rounded-lg transition-colors duration-200 flex items-center justify-center shadow-lg shadow-indigo-500/20`}
       >
         {isLoading ? <DynamicIcon name="loader-circle" size={20} className="text-gray-400 animate-spin" /> : submitIcon}
       </button>
