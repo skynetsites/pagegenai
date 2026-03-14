@@ -59,11 +59,9 @@ export const PromptInput = (props: PromptInputProps) => {
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder={
-          input.trim().length > 0 && input.trim().length < 3
-          ? "Digite pelo menos 3 caracteres..."
-          : placeholder
-        }
+        required
+        minLength={3}
+        placeholder={placeholder}
         className="flex-1 bg-transparent border-none text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 pr-0 px-3 md:px4 py-3 focus:outline-none text-sm transition-all"
         autoFocus
       />
