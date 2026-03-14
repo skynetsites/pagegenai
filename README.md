@@ -8,164 +8,113 @@
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT/Gemini-black?logo=openai)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-
 # Sobre o projeto
 
-O **PageGen AI** é uma aplicação web que tem como objetivo transformar ideias em **Landing Pages estruturadas** de forma rápida utilizando **Inteligência Artificial**.
+O **PageGen AI** transforma ideias em **Landing Pages estruturadas** de forma rápida usando **Inteligência Artificial**.  
+A aplicação é voltada para desenvolvedores, empreendedores e criadores digitais, ajudando a validar ideias rapidamente com uma base inicial de páginas.
 
-A proposta do projeto é ajudar desenvolvedores, empreendedores e criadores digitais a **validar ideias mais rapidamente**, gerando estruturas iniciais de páginas que podem servir como base para produtos, serviços ou campanhas.
+A IA utilizada é a **Google Gemini API**, que recebe uma ideia do usuário e retorna sugestões estruturadas de conteúdo para a landing page.  
+O projeto está em **fase BETA** e novas funcionalidades estão sendo desenvolvidas continuamente.
 
-Para gerar as páginas automaticamente, a aplicação utiliza **Inteligência Artificial através da API do Google Gemini**, que recebe uma ideia do usuário e retorna sugestões estruturadas de conteúdo para uma Landing Page.
-
-Essa abordagem acelera o processo de criação e reduz o tempo necessário para estruturar páginas iniciais de projetos.
-
-O projeto ainda está em **fase BETA**, então novas funcionalidades e melhorias continuam sendo desenvolvidas.
-
-## Preview
+# Preview
 
 ### Demonstração da Aplicação
 
-Confira abaixo como o **PageGen AI** transforma ideias em landing pages de forma rápida e prática.  
-Acompanhe o funcionamento pelo GIF a seguir:
+Confira abaixo como o **PageGen AI** transforma ideias em landing pages rapidamente:
 
 ![Preview do projeto](./public/preview.gif)
 
 # Tecnologias utilizadas
 
-Este projeto foi desenvolvido utilizando as seguintes tecnologias:
-
-- React
-- TypeScript
-- Vite
-- TailwindCSS
-- React Router
-- Lucide Icons
-- Google Gemini API (IA generativa)
+- React  
+- TypeScript  
+- Vite  
+- TailwindCSS  
+- React Router  
+- Lucide Icons  
+- Google Gemini API  
 
 # Integração com Inteligência Artificial
 
-A geração das Landing Pages é feita utilizando **Inteligência Artificial através da API do Google Gemini**.
+A geração das Landing Pages é feita utilizando **IA via Google Gemini API**.  
+Para isso, é necessário configurar uma **API Key** através de variáveis de ambiente, garantindo **segurança e privacidade**.
 
-A aplicação envia instruções para o modelo de IA com base na ideia informada pelo usuário. O modelo retorna uma estrutura inicial de conteúdo que pode ser utilizada para montar uma Landing Page.
+# Como executar o projeto localmente
 
-Para utilizar essa funcionalidade, é necessário configurar uma **chave da API (API Key)** através de variáveis de ambiente.
+Clone o repositório com:
 
-Isso garante mais segurança e evita expor a chave diretamente no código.
-
-# Como executar o projeto
-
-Clone o repositório:
-
-```bash
 git clone https://github.com/skynetsites/pagegenai
-```
 
 Entre na pasta do projeto:
 
-```bash
 cd pagegenai
-```
 
 Instale as dependências:
 
-```bash
 npm install
-```
 
-## Configuração da API
+### Configuração da API
 
-Para gerar Landing Pages via IA, o projeto utiliza a **API do Google Gemini**.
+1. Crie um arquivo `.env` na raiz do projeto (não versionado) com:
 
-**Importante:** nunca coloque a chave diretamente no repositório ou no `.env` público.  
-
-Use variáveis de ambiente locais e no serviço de deploy (como Vercel).
-
-### Passo a passo local:
-
-1. Crie um arquivo `.env.local` na raiz do projeto (não versionado).  
-2. Adicione sua chave:
-
-```
 GEMINI_API_KEY=sua_chave_aqui
-```
 
-3. Adicione `.env.local` ao `.gitignore` para não enviar a chave para o GitHub.
+2. Adicione `.env` ao `.gitignore` para não enviar sua chave para o GitHub.  
+> ⚠️ No Windows, **use `.env`** em vez de `.env.local` para que o Node e o Vercel Dev carreguem corretamente.
 
-### Passo a passo no Vercel:
+### Executando o projeto
 
-1. Abra **Settings → Environment Variables** do projeto.  
-2. Adicione a variável `GEMINI_API_KEY` com o valor da sua chave.  
-3. Faça redeploy do projeto.  
+**Recomendado (Frontend + Backend):**
 
-Isso garante que sua chave fique **protegida e não fique pública**.
+npx vercel dev
 
+- Acesse: http://localhost:3000  
+- O backend `/api/gemini` funciona corretamente, igual à produção.  
 
-## Executar o projeto
+**Opcional – Apenas Frontend (Vite):**
 
-Após configurar a variável de ambiente, execute:
-
-```bash
 npm run dev
-```
 
-O projeto estará disponível em:
+- Acesse: http://localhost:5173  
+- A API `/api/gemini` pode não funcionar neste modo.
 
-```
-http://localhost:5173
-```
+# Desafios enfrentados
 
-# Desafio enfrentado durante o desenvolvimento
-
-Um dos principais desafios foi estruturar uma forma de transformar **ideias em páginas organizadas automaticamente**, sem perder a lógica de uma boa Landing Page.
-
-Durante o desenvolvimento ficou claro que não basta apenas gerar conteúdo automaticamente. É necessário organizar corretamente os blocos da página para garantir uma boa experiência para o usuário.
-
-Outro desafio foi integrar a **API de Inteligência Artificial** de forma que as respostas geradas fossem úteis para estruturar uma página real.
+- Estruturar **ideias em páginas organizadas automaticamente**  
+- Integrar a **IA de forma útil** para gerar conteúdo que realmente monte uma landing page funcional
 
 # Aprendizados
 
-Durante a criação do projeto alguns aprendizados importantes foram:
+- Estruturação moderna com **React + Vite**  
+- Criação rápida de interfaces com **TailwindCSS**  
+- Organização de rotas com **React Router**  
+- Integração com APIs de **IA generativa**  
+- Uso de **variáveis de ambiente** para proteger chaves  
 
-- Estruturação de aplicações modernas com **React + Vite**
-- Uso do **TailwindCSS** para criação de interfaces rápidas
-- Organização de rotas utilizando **React Router**
-- Integração com **APIs de Inteligência Artificial**
-- Uso de **variáveis de ambiente para proteger chaves de API**
-- Estruturação de projetos escaláveis no frontend
+# Próximos passos
 
-# Próximos passos do projeto
-
-Algumas melhorias planejadas:
-
-- Novas ferramentas baseadas em IA
-- Mais opções de geração de páginas
-- Melhorias na experiência do usuário
-- Novos templates de Landing Pages
-- Melhorias na geração de conteúdo pela IA
+- Novas ferramentas baseadas em IA  
+- Mais opções de geração de páginas  
+- Novos templates  
+- Melhorias na geração de conteúdo  
 
 # Contribuição
 
-Se quiser contribuir com feedback ou sugestões, fique à vontade para abrir uma issue ou enviar ideias.  
-
-**Ajude a manter esse projeto!**
-
-Este é um projeto gratuito e independente. Sua doação via PIX ajuda a manter a plataforma e a IA, para continuarmos oferecendo este serviço:
+Se quiser contribuir, abra uma **issue** ou envie **pull requests**.  
+Doações via PIX ajudam a manter o projeto:
 
 ![QR Code de Contribuição](https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=00020126580014BR.GOV.BCB.PIX013605ed170a-9ddf-4526-94ac-d17affc230bc5204000053039865802BR5925Francisco%20Isaias%20Oliveira6009SAO%20PAULO62140510dvfzXaciz76304B02E)
 
 # Deploy
 
-Aplicação disponível em:
-
+Aplicação disponível em:  
 https://pagegenai-nu.vercel.app/
 
 # Licença
 
-Este projeto está licenciado sob a **Licença MIT**.
+Licenciado sob **MIT**. Veja [LICENSE](./LICENSE) para mais detalhes.
 
-Veja o arquivo **[LICENSE](./LICENSE)** para mais detalhes.
+# Autor
 
-## Autor
-
-Projeto desenvolvido por **Isaias Oliveira**.  
-Conecte-se comigo no **[in/skynetsites](https://www.linkedin.com/in/skynetsites/)**
+**Isaias Oliveira**  
+Conecte-se: [in/skynetsites](https://www.linkedin.com/in/skynetsites/)
