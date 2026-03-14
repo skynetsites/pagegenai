@@ -46,6 +46,7 @@ export const PromptInput = (props: PromptInputProps) => {
     setInput("");
   };
 
+  const isDisabled = input.trim().length < 3 || isLoading;
   const prefix = inputPrefix || <DynamicIcon name="sparkles" size={20} className={isLoading ? "animate-pulse" : ""} />;
 
   return (
@@ -58,7 +59,11 @@ export const PromptInput = (props: PromptInputProps) => {
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder={placeholder}
+        placeholder={
+          input.trim().length > 0 && input.trim().length < 3
+          ? "Digite pelo menos 3 caracteres..."
+          : placeholder
+        }
         className="flex-1 bg-transparent border-none text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 pr-0 px-3 md:px4 py-3 focus:outline-none text-sm transition-all"
         autoFocus
       />
@@ -72,8 +77,8 @@ export const PromptInput = (props: PromptInputProps) => {
       </button>
       <button
         type="submit"
-        disabled={!input.trim() || isLoading}
-        className={`bg-indigo-600 ${!input.trim() ? 'opacity-50 cursor-not-allowed' : 'hover:bg-indigo-500 cursor-pointer'} text-white p-3 rounded-lg transition-colors duration-200 flex items-center justify-center shadow-lg shadow-indigo-500/20`}
+        disabled={isDisabled}
+        className={`bg-indigo-600 ${isDisabled ? 'opacity-50 cursor-not-allowed' : 'hover:bg-indigo-500 cursor-pointer'} text-white p-3 rounded-lg transition-colors duration-200 flex items-center justify-center shadow-lg shadow-indigo-500/20`}
       >
         {isLoading ? <DynamicIcon name="loader-circle" size={20} className="text-gray-400 animate-spin" /> : submitIcon}
       </button>
